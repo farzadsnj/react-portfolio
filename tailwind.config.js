@@ -13,21 +13,22 @@ module.exports = {
         "dark-grey": "#757575",
         "opaque-black": "rgba(0,0,0,0.35)",
       },
-      backgroundColor: (theme) => ({
+      backgroundImage: (theme) => ({
         "gradient-rainbow":
-          "linear-gradient(81.66deg, #00b5ee 7.21%, #ff45a4 45.05%, #ffba00 78.07%",
+          "linear-gradient(81.66deg, #00B5EE 7.21%, #FF45A4 45.05%, #FFBA00 78.07%)",
+
         "gradient-rainblue":
-          "linear-gradient(90deg, #24cbff 14.53%, #fc59ff 69.36%, #ffbd0c 117.73%",
+          "linear-gradient(90deg, #24CBFF 14.53%, #FC59FF 69.36%, #FFBD0C 117.73%)",
       }),
       fontFamily: {
         playfair: ["Playfair Display", "serif"],
         opensans: ["Open Sans", "sans-serif"],
       },
       content: {
-        brush: "url('./src/assets/brush.png')",
-        person1: "url('./src/assets/person-1.png')",
-        person2: "url('./src/assets/person-2.png')",
-        person3: "url('./src/assets/person-3.png')",
+        brush: "url('./assets/brush.png')",
+        person1: "url('./assets/person-1.png')",
+        person2: "url('./assets/person-2.png')",
+        person3: "url('./assets/person-3.png')",
       },
     },
     screens: {
