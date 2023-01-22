@@ -32,7 +32,7 @@ const SocialMediaIcons = () => {
 
       <a
         className="flex font-playfair hover:opacity-50 transition duration-500 justify-center"
-        href="https://www.instagram.com/farzadsnj.cv/"
+        href="https://zil.ink/farzadsnj"
         target="_blank"
         rel="noreferrer"
       >
