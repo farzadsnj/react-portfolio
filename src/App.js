@@ -48,10 +48,10 @@ function App() {
       <div className="w-5/6 mx-auto md:h-auto">
         <Projects />
       </div>
-      <LineGradient />
-      <div className="w-5/6 mx-auto md:h-auto">
+      {/* <LineGradient /> */}
+      {/* <div className="w-5/6 mx-auto md:h-auto">
         <Testimonials />
-      </div>
+      </div> */}
       <LineGradient />
       <div className="w-5/6 mx-auto md:h-auto">
         <Contact />

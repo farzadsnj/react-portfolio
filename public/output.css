@@ -1111,6 +1111,26 @@ video {
   color: rgba(0,0,0,0.35);
 }
 
+.placeholder-teal-50::-webkit-input-placeholder{
+  --tw-placeholder-opacity: 1;
+  color: rgb(240 253 250 / var(--tw-placeholder-opacity));
+}
+
+.placeholder-teal-50::placeholder{
+  --tw-placeholder-opacity: 1;
+  color: rgb(240 253 250 / var(--tw-placeholder-opacity));
+}
+
+.placeholder-gray-400::-webkit-input-placeholder{
+  --tw-placeholder-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-placeholder-opacity));
+}
+
+.placeholder-gray-400::placeholder{
+  --tw-placeholder-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-placeholder-opacity));
+}
+
 .opacity-0{
   opacity: 0;
 }
