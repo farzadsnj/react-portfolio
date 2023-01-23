@@ -74,7 +74,7 @@ const MySkills = () => {
                 Graphic and UI Design
               </p>
             </div>
-            <div className="w-1/2 md:w-3/4 h-32 bg-blue absolute right-0 top-0 z-[-1]" />
+            <div className="w-1/2 md:w-3/4 h-32 bg-orange-600 absolute right-0 top-0 z-[-1]" />
           </div>
           <p className="mt-5">
             Working with Designing tools of Adobe, such as{" "}
@@ -126,10 +126,10 @@ const MySkills = () => {
             <div className="z-10">
               <p className="font-playfair font-semibold text-5xl">03</p>
               <p className="font-playfair font-semibold text-3xl mt-3">
-                Computer and network technician
+                Computer & networks
               </p>
             </div>
-            <div className="w-1/2 md:w-3/4 h-32 bg-yellow absolute right-0 top-0 z-[-1]" />
+            <div className="w-1/2 md:w-3/4 h-32 bg-blue absolute right-0 top-0 z-[-1]" />
           </div>
           <p className="mt-5">
             <span className="text-yellow">Establish, Operate and Maintain</span>{" "}
