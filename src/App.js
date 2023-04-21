@@ -6,9 +6,9 @@ import Landing from "./scenes/Landing";
 import LineGradient from "./components/LineGradient";
 import MySkills from "./scenes/MySkills";
 import Projects from "./scenes/Projects";
-import Testimonials from "./scenes/Testimonials";
 import Contact from "./scenes/Contact";
 import Footer from "./scenes/Footer";
+// import Services from "./scenes/Services";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState("home");
@@ -48,9 +48,9 @@ function App() {
       <div className="w-5/6 mx-auto md:h-auto">
         <Projects />
       </div>
-      {/* <LineGradient /> */}
+      <LineGradient />
       {/* <div className="w-5/6 mx-auto md:h-auto">
-        <Testimonials />
+        <Services />
       </div> */}
       <LineGradient />
       <div className="w-5/6 mx-auto md:h-auto">

@@ -2,6 +2,7 @@ import React from "react";
 import LineGradient from "../components/LineGradient";
 import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
+import SocialMediaIcons from "../components/SocialMediaIcons";
 
 const Contact = () => {
   const {
@@ -17,6 +18,7 @@ const Contact = () => {
     }
   };
   return (
+    <>
     <section id="contact" className="py-48">
       {/* heading */}
       <motion.div
@@ -37,6 +39,9 @@ const Contact = () => {
           <div className="flex md:justify-end my-5">
             <LineGradient width="w-1/2" />
           </div>
+          <span>
+            <SocialMediaIcons />
+          </span>
         </div>
       </motion.div>
 
@@ -138,6 +143,7 @@ const Contact = () => {
         </motion.div>
       </div>
     </section>
+      </>
   );
 };
 

@@ -85,7 +85,7 @@ const Landing = ({ setSelectedPage }) => {
             href="#contact"
           >
             <div className="bg-deep-blue hover:text-yellow transition duration-500 w-full h-full flex items-center justify-center px-10 font-semibold">
-              See My Services
+              See My Services (coming soon)
             </div>
           </AnchorLink>
         </motion.div>
