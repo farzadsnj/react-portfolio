@@ -45,16 +45,10 @@ const Landing = ({ setSelectedPage }) => {
           }}
         >
           <p className="text-6xl font-playfair z-10 text-center md:text-start">
-            Farzad {""}
-            {/* <span
-              className="xs:relative xs:text-deep-blue xs:font-semibold z-20 xs:before:content-brush
-              before:absolute before:-left-[25px] before:-top-[70px] before:z-[-1]"
-            > */}
-              Sanjarani
-            {/* </span> */}
+            Farzad {""}Sanjarani
           </p>
           <p className="mt-10 mb-7 text-2xl text-center text-yellow md:text-start font-playfair">
-             FrontEnd Developer | Graphic Designer
+             Software Developer | React Developer
           </p>
         </motion.div>
 
@@ -76,7 +70,7 @@ const Landing = ({ setSelectedPage }) => {
             onClick={() => setSelectedPage("contact")}
             href="#contact"
           >
-            Contact Me
+            Resume
           </AnchorLink>
 
           <AnchorLink
@@ -85,7 +79,7 @@ const Landing = ({ setSelectedPage }) => {
             href="#contact"
           >
             <div className="bg-deep-blue hover:text-yellow transition duration-500 w-full h-full flex items-center justify-center px-10 font-semibold">
-              See My Services (coming soon)
+              Porifolio
             </div>
           </AnchorLink>
         </motion.div>

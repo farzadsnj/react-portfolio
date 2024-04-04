@@ -26,7 +26,7 @@ const MySkills = () => {
           </p>
           <LineGradient width={"w-1/3"} />
           <p className="mt-8 mb-7 text-2xl font-semibold">
-            The following three categories describe my main specialties.
+            The following three categories describe my main expertise.
           </p>
         </motion.div>
 
@@ -34,9 +34,9 @@ const MySkills = () => {
           {isAboveMediumScreens ? (
             <div
               className="relative z-0 ml-20 before:absolute before:-top-10 before:-left-10 
-          before:w-full before:max-w-[400px] before:h-full before:border-2 before:border-yellow before:z-[-1]"
+before:w-full before:max-w-[400px] before:h-full before:border-2 before:border-yellow before:z-[-1]"
             >
-              {/* <Slideshow className="z-10"/> */}
+              <LineGradient width={"w-full"} />
               <img
                 alt="skills"
                 src="../assets/skills-image.png"
@@ -44,12 +44,14 @@ const MySkills = () => {
               />
             </div>
           ) : (
-            <Slideshow className="z-10" />
-            // <img
-            //   alt="skills"
-            //   src="../assets/skills-image.png"
-            //   className="z-10"
-            // />
+            <>
+              <Slideshow className="z-10" />
+              <img
+                alt="skills"
+                src="../assets/skills-image.png"
+                className="z-10"
+              />
+            </>
           )}
         </div>
       </div>
