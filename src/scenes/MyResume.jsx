@@ -43,7 +43,7 @@ const MyResume = () => {
 
   const isAboveMediumScreens = useMediaQuary("(min-width: 1060px)");
   return (
-    <section id="skills" className="p-10 pb-24">
+    <section id="resume" className="p-10 pb-24">
       {/* header and image section */}
       <div className="md:flex md:justify-between md:gap-16 mt-32">
         <motion.div
@@ -93,7 +93,6 @@ before:w-full before:max-w-[400px] before:h-full before:border-2 before:border-y
       </div>
       {/* skills */}
       <div className="md:flex md:justify-between mt-16 gap-32">
-        {/* Experience */}
         <motion.div
           className="md:w-1/3 mt-10"
           initial="hidden"
@@ -215,16 +214,51 @@ before:w-full before:max-w-[400px] before:h-full before:border-2 before:border-y
       <SectionComponent
         title="Publications/Notable Outputs"
         delay={0.8}
-        content="Highlight any publications, projects, or notable outputs you've contributed to."
-      />
-      <LineGradient width={"w100%"} />
-
-      {/* Qualifications */}
-      <SectionComponent
-        title="Qualifications"
-        delay={0.9}
-        content="Outline your academic qualifications, certifications, and any other formal training."
-      />
+        content={
+          <div className="grid grid-cols-3 gap-3 list-disc list-inside">
+            <div className="linkedin-post-wrapper">
+              <p className="font-playfair font-semibold text-2xl mb-5">
+                Advanced <span className="text-yellow">Git Commands</span>
+              </p>
+              <iframe
+                src="https://www.linkedin.com/embed/feed/update/urn:li:share:7165931316151066626"
+                height="900"
+                width="500"
+                frameBorder="0"
+                allowFullScreen=""
+                title="Embedded post"
+              ></iframe>
+            </div>
+            <div className="linkedin-post-wrapper">
+              <p className="font-playfair font-semibold text-2xl mb-5">
+                Essential <span className="text-yellow">Docker Commands</span>
+              </p>
+              <iframe
+                src="https://www.linkedin.com/embed/feed/update/urn:li:share:7167729096272150528"
+                height="900"
+                width="500"
+                frameBorder="0"
+                allowFullScreen=""
+                title="Embedded post"
+              ></iframe>
+            </div>
+            <div className="linkedin-post-wrapper">
+              <p className="font-playfair font-semibold text-2xl mb-5">
+                Dynamic data{" "}
+                <span className="text-yellow">visualization Challenge</span>
+              </p>
+              <iframe
+                src="https://www.linkedin.com/embed/feed/update/urn:li:share:7165543138386755584"
+                height="900"
+                width="500"
+                frameBorder="0"
+                allowFullScreen=""
+                title="Embedded post"
+              ></iframe>
+            </div>
+          </div>
+        }
+      />   
     </section>
   );
 };
@@ -251,7 +285,7 @@ const SectionComponent = ({ title, delay, experiences, content, skills }) => (
           <p>{exp.description}</p>
         </div>
       ))}
-    {content && <p>{content}</p>}
+    {content && <>{content}</>}
     {skills && (
       <div className="grid grid-cols-2 gap-4">
         {skills.map((skill, index) => (

@@ -4,11 +4,11 @@ import Navbar from "./scenes/Navbar";
 import DotGroup from "./scenes/DotGroup";
 import Landing from "./scenes/Landing";
 import LineGradient from "./components/LineGradient";
-import MySkills from "./scenes/MyResume";
+import MyResume from "./scenes/MyResume";
 import Projects from "./scenes/Projects";
 import Contact from "./scenes/Contact";
 import Footer from "./scenes/Footer";
-// import Services from "./scenes/Services";
+import Portfolio from "./scenes/Portfolio";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState("home");
@@ -42,16 +42,16 @@ function App() {
       </div>
       <LineGradient />
       <div className="w-5/6 mx-auto md:h-auto">
-        <MySkills />
+        <MyResume />
       </div>
       <LineGradient />
       <div className="w-5/6 mx-auto md:h-auto">
         <Projects />
       </div>
       <LineGradient />
-      {/* <div className="w-5/6 mx-auto md:h-auto">
-        <Services />
-      </div> */}
+      <div className="w-5/6 mx-auto md:h-auto">
+        <Portfolio />
+      </div>
       <LineGradient />
       <div className="w-5/6 mx-auto md:h-auto">
         <Contact />

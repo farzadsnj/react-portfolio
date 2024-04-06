@@ -48,7 +48,7 @@ const Landing = ({ setSelectedPage }) => {
             Farzad {""}Sanjarani
           </p>
           <p className="mt-10 mb-7 text-2xl text-center text-yellow md:text-start font-playfair">
-             Software Developer | React Developer
+            Software Developer | React Developer
           </p>
         </motion.div>
 
@@ -75,11 +75,11 @@ const Landing = ({ setSelectedPage }) => {
 
           <AnchorLink
             className="rounded-r-sm bg-gradient-rainblue py-0.5 pr-0.5"
-            onClick={() => setSelectedPage("contact")}
-            href="#contact"
+            onClick={() => setSelectedPage("portfolio")}
+            href="#portfolio"
           >
             <div className="bg-deep-blue hover:text-yellow transition duration-500 w-full h-full flex items-center justify-center px-10 font-semibold">
-              Porifolio
+              Portfolio
             </div>
           </AnchorLink>
         </motion.div>

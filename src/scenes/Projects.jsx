@@ -1,5 +1,7 @@
 import React from "react";
 import LineGradient from "../components/LineGradient";
+// import Portfolio from "../components/Portfolio";
+
 import { motion } from "framer-motion";
 
 const container = {
@@ -46,7 +48,7 @@ const Project = ({ title, description, viewLink, githubCode }) => {
 
 const Projects = () => {
   return (
-    <section id="projects" className="pt-40 pb-40">
+    <section id="projects" className="pt-35 pb-40">
       <motion.div
         className="md:w-2/5 mx-auto text-center"
         initial="hidden"
@@ -81,26 +83,28 @@ const Projects = () => {
           viewport={{ once: true, amount: 0.2 }}
         >
           {/* row1 */}
-          <div
-            className="flex justify-center text-center items-center p-10 bg-red 
-          max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold"
-          >
+          <div className="flex justify-center text-center items-center p-10 bg-yellow max-w-[400px] max-h-[400px] text-2xl text-black font-playfair font-semibold">
             <span className="hover:text-3xl hover:transition duration-300">
-              Graphic & UI Designs
+              React.JS Redux/Thunk Projects
             </span>
           </div>
           <Project
-            title="Project 1"
-            description="Social Media Post and Story Design"
+            title="Project 9"
+            viewLink="https://www.instagram.com/reel/CnG0CIbOHLI/?utm_source=ig_web_copy_link"
+            githubCode="https://github.com/farzadsnj/shopping-site"
+            description="Shopping site with Redux & Thunk & fetch API"
           />
           <Project
-            title="Project 2"
-            description="Accurate drawing of geometric shapes for educational purposes"
+            title="Project 8"
+            viewLink="https://www.instagram.com/reel/CnM7RBvJgEZ/?utm_source=ig_web_copy_link"
+            githubCode="https://github.com/farzadsnj/weather-app"
+            description="Weather App & Forecast with fetch API"
           />
           <Project
-            title="Project 3"
-            viewLink="https://www.instagram.com/reel/CiAQFDzASpC/?utm_source=ig_web_copy_link"
-            description="UI Design with Adobe XD"
+            title="Project 7"
+            viewLink="https://www.instagram.com/p/CnXmT_OSowe/?utm_source=ig_web_copy_link"
+            githubCode="https://github.com/farzadsnj/dashboard-app"
+            description="Dashboard App with Data Grid & Nivo charts & Material UI"
           />
 
           {/* row2 */}
@@ -131,29 +135,27 @@ const Projects = () => {
             </span>
           </div>
 
-          {/* row3 */}
-          <div className="flex justify-center text-center items-center p-10 bg-yellow max-w-[400px] max-h-[400px] text-2xl text-black font-playfair font-semibold">
+          {/* row1 */}
+          <div
+            className="flex justify-center text-center items-center p-10 bg-red 
+          max-w-[400px] max-h-[400px] text-2xl font-playfair font-semibold"
+          >
             <span className="hover:text-3xl hover:transition duration-300">
-              React.JS Redux/Thunk Projects
+              Graphic & UI Designs
             </span>
           </div>
           <Project
-            title="Project 7"
-            viewLink="https://www.instagram.com/reel/CnG0CIbOHLI/?utm_source=ig_web_copy_link"
-            githubCode="https://github.com/farzadsnj/shopping-site"
-            description="Shopping site with Redux & Thunk & fetch API"
+            title="Project 3"
+            description="Social Media Post and Story Design"
           />
           <Project
-            title="Project 8"
-            viewLink="https://www.instagram.com/reel/CnM7RBvJgEZ/?utm_source=ig_web_copy_link"
-            githubCode="https://github.com/farzadsnj/weather-app"
-            description="Weather App & Forecast with fetch API"
+            title="Project 2"
+            description="Accurate drawing of geometric shapes for educational purposes"
           />
           <Project
-            title="Project 9"
-            viewLink="https://www.instagram.com/p/CnXmT_OSowe/?utm_source=ig_web_copy_link"
-            githubCode="https://github.com/farzadsnj/dashboard-app"
-            description="Dashboard App with Data Grid & Nivo charts & Material UI"
+            title="Project 1"
+            viewLink="https://www.instagram.com/reel/CiAQFDzASpC/?utm_source=ig_web_copy_link"
+            description="UI Design with Adobe XD"
           />
         </motion.div>
       </div>
