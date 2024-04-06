@@ -34,7 +34,7 @@ const SocialMediaIcons = () => {
 
         <a
           className="flex font-playfair hover:opacity-50 transition duration-500 justify-center"
-          href="https://drive.google.com/file/d/1cUOgsIlJ1TMTxmGBcygG7AdvKGk5eS0K/view?usp=sharing"
+          href="https://drive.google.com/file/d/1yMp7C3KoQNrKphTwXsbQHN2fjnKnzqpB/view?usp=sharing"
           target="_blank"
           rel="noreferrer"
         >
