@@ -13,7 +13,7 @@ const projectVariant = {
   visible: { opacity: 1, scale: 1 },
 };
 
-const Project = ({ title, description, viewLink, githubCode }) => {
+const ProjectGitHub = ({ title, description, viewLink, githubCode }) => {
   const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500
     bg-grey z-30 flex flex-col justify-center items-center text-center p-16 text-white`;
   const projectTitle = title.split(" ").join("-").toLowerCase();
@@ -37,6 +37,29 @@ const Project = ({ title, description, viewLink, githubCode }) => {
           className="text-yellow font-semibold justify-center text-sm"
         >
           View On GitHub
+        </a>
+      </div>
+      <img alt={projectTitle} src={`../assets/${projectTitle}.jpg`} />
+    </motion.div>
+  );
+};
+
+const ProjectGraphic = ({ title, description, Inlarge }) => {
+  const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500
+    bg-grey z-30 flex flex-col justify-center items-center text-center p-16 text-white`;
+  const projectTitle = title.split(" ").join("-").toLowerCase();
+  return (
+    <motion.div variants={projectVariant} className="relative">
+      <div className={overlayStyles}>
+        <p className="text-2xl font-playfair">{title}</p>
+        <p className="mt-7">{description}</p>
+        <a
+          href={Inlarge}
+          target="_blank"
+          rel="noreferrer"
+          className="text-yellow font-semibold justify-center"
+        >
+          View
         </a>
       </div>
       <img alt={projectTitle} src={`../assets/${projectTitle}.jpg`} />
@@ -86,39 +109,39 @@ const Projects = () => {
               React.JS Redux/Thunk Projects
             </span>
           </div>
-          <Project
-            title="Project 9"
+          <ProjectGitHub
+            title="Project 7"
             viewLink="https://www.instagram.com/reel/CnG0CIbOHLI/?utm_source=ig_web_copy_link"
             githubCode="https://github.com/farzadsnj/shopping-site"
             description="Shopping site with Redux & Thunk & fetch API"
           />
-          <Project
+          <ProjectGitHub
             title="Project 8"
             viewLink="https://www.instagram.com/reel/CnM7RBvJgEZ/?utm_source=ig_web_copy_link"
             githubCode="https://github.com/farzadsnj/weather-app"
             description="Weather App & Forecast with fetch API"
           />
-          <Project
-            title="Project 7"
+          <ProjectGitHub
+            title="Project 9"
             viewLink="https://www.instagram.com/p/CnXmT_OSowe/?utm_source=ig_web_copy_link"
             githubCode="https://github.com/farzadsnj/dashboard-app"
             description="Dashboard App with Data Grid & Nivo charts & Material UI"
           />
 
           {/* row2 */}
-          <Project
+          <ProjectGitHub
             title="Project 4"
             viewLink="https://www.instagram.com/reel/Cjsac1QIeT1/?utm_source=ig_web_copy_link"
             githubCode="https://github.com/farzadsnj/Live_user_filter"
             description="Live Search User with JavaScript"
           />
-          <Project
+          <ProjectGitHub
             title="Project 5"
             viewLink="https://www.instagram.com/tv/CjSERXrqNZv/?utm_source=ig_web_copy_link"
             githubCode="https://github.com/farzadsnj/passwordGenerator"
             description="Password Generator with JavaScript"
           />
-          <Project
+          <ProjectGitHub
             title="Project 6"
             viewLink="https://www.instagram.com/tv/CjSEV5AK1To/?utm_source=ig_web_copy_link"
             githubCode="https://github.com/farzadsnj/verify_UI"
@@ -142,17 +165,16 @@ const Projects = () => {
               Graphic & UI Designs
             </span>
           </div>
-          <Project
-            title="Project 3"
+          <ProjectGraphic
+            title="Project 1"
             description="Social Media Post and Story Design"
           />
-          <Project
+          <ProjectGraphic
             title="Project 2"
             description="Accurate drawing of geometric shapes for educational purposes"
           />
-          <Project
-            title="Project 1"
-            viewLink="https://www.instagram.com/reel/CiAQFDzASpC/?utm_source=ig_web_copy_link"
+          <ProjectGraphic
+            title="Project 3"
             description="UI Design with Adobe XD"
           />
         </motion.div>
