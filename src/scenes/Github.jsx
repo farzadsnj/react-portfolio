@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
-const Portfolio = () => {
+const Github = () => {
   const [repositories, setRepositories] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -26,7 +26,7 @@ const Portfolio = () => {
   );
 
   return (
-    <section id="portfolio" className="p-10 pb-24">
+    <section id="github" className="p-10 pb-24">
       <div className="md:flex md:justify-between md:gap-8 mt-8">
         <motion.div
           className="md:w-full"
@@ -73,4 +73,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default Github;

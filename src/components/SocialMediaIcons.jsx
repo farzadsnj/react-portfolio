@@ -43,7 +43,7 @@ const SocialMediaIcons = () => {
             src="../assets/profile.png"
             className=" mr-2 justify-center"
           />
-          DOWNLOAD CV
+          CV
         </a>
         </div>
         <div className="flex justify-center md:justify-start my-10 gap-7">

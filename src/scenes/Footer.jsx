@@ -23,11 +23,11 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="h-64 bg-red pt-10">
+    <footer className="h-auto bg-orange-400 p-10">
       <div className="w-4/6 mx-auto">
         {weather && (
-          <div className="md:flex justify-between items-center">
-            <div className="weather-info text-white">
+          <div className="w-full md:flex justify-between items-center">
+            <div className="w-3/6 weather-info text-black font-bold">
               <p>
                 Weather in {weather.name}: {weather.main.temp}°C,{" "}
                 {weather.weather[0].description}
@@ -39,18 +39,20 @@ const Footer = () => {
                 zoom={12}
                 scrollWheelZoom={false}
                 style={{ height: "120px", width: "100%" }}
+                className="w-full h-full"
               >
                 <TileLayer
                   url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                   attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 />
                 <Marker position={[weather.coord.lat, weather.coord.lon]}>
-                  <Popup>Current weather location.</Popup>
+                  <Popup>Current weather location</Popup>
                 </Marker>
               </MapContainer>
             </div>
           </div>
         )}
+        <br />
         <div className="md:flex justify-between items-center mb-4">
           <p className="font-playfair font-semibold text-2xl text-white">
             FARZAD SANJARANI
