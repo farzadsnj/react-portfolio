@@ -60,7 +60,6 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
         )}
 
         {/* mobile menu */}
-        
         {!isAboveSmallScreens && isMenuToggled && (
           <div className="fixed right-0 bottom-0 h-full bg-blue w-[300px]">
             {/* close icon */}

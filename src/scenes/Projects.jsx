@@ -1,7 +1,5 @@
 import React from "react";
 import LineGradient from "../components/LineGradient";
-// import Portfolio from "../components/Portfolio";
-
 import { motion } from "framer-motion";
 
 const container = {

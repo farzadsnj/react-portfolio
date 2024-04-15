@@ -205,60 +205,61 @@ before:w-full before:max-w-[400px] before:h-full before:border-2 before:border-y
         experiences={experiences || []}
       />
       <LineGradient width={"w100%"} />
-
       {/* Skills */}
       <SectionComponent title="Skills" delay={0.7} skills={skills} />
       <LineGradient width={"w100%"} />
-
-      {/* Publications/Notable Outputs */}
+      Publications/Notable Outputs
       <SectionComponent
         title="Publications/Notable Outputs"
         delay={0.8}
         content={
-          <div className="grid grid-cols-3 gap-3 list-disc list-inside">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 list-disc list-inside">
             <div className="linkedin-post-wrapper">
               <p className="font-playfair font-semibold text-2xl mb-5">
                 Advanced <span className="text-yellow">Git Commands</span>
               </p>
-              <iframe
-                src="https://www.linkedin.com/embed/feed/update/urn:li:share:7165931316151066626"
-                height="900"
-                width="500"
-                frameBorder="0"
-                allowFullScreen=""
-                title="Embedded post"
-              ></iframe>
+              <div className="iframe-container">
+                <iframe
+                  src="https://www.linkedin.com/embed/feed/update/urn:li:share:7165931316151066626"
+                  frameBorder="0"
+                  allowFullScreen=""
+                  title="Embedded post"
+                  className="responsive-iframe"
+                ></iframe>
+              </div>
             </div>
             <div className="linkedin-post-wrapper">
               <p className="font-playfair font-semibold text-2xl mb-5">
                 Essential <span className="text-yellow">Docker Commands</span>
               </p>
-              <iframe
-                src="https://www.linkedin.com/embed/feed/update/urn:li:share:7167729096272150528"
-                height="900"
-                width="500"
-                frameBorder="0"
-                allowFullScreen=""
-                title="Embedded post"
-              ></iframe>
+              <div className="iframe-container">
+                <iframe
+                  src="https://www.linkedin.com/embed/feed/update/urn:li:share:7167729096272150528"
+                  frameBorder="0"
+                  allowFullScreen=""
+                  title="Embedded post"
+                  className="responsive-iframe"
+                ></iframe>
+              </div>
             </div>
             <div className="linkedin-post-wrapper">
               <p className="font-playfair font-semibold text-2xl mb-5">
                 Dynamic data{" "}
                 <span className="text-yellow">visualization Challenge</span>
               </p>
-              <iframe
-                src="https://www.linkedin.com/embed/feed/update/urn:li:share:7165543138386755584"
-                height="900"
-                width="500"
-                frameBorder="0"
-                allowFullScreen=""
-                title="Embedded post"
-              ></iframe>
+              <div className="iframe-container">
+                <iframe
+                  src="https://www.linkedin.com/embed/feed/update/urn:li:share:7165543138386755584"
+                  frameBorder="0"
+                  allowFullScreen=""
+                  title="Embedded post"
+                  className="responsive-iframe"
+                ></iframe>
+              </div>
             </div>
           </div>
         }
-      />   
+      />
     </section>
   );
 };

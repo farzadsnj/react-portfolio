@@ -7,9 +7,7 @@ const Footer = () => {
   const [weather, setWeather] = useState(null);
 
   useEffect(() => {
-    // Replace 'YOUR_API_KEY' with your actual API key from OpenWeatherMap
     const apiKey = "dbbcf3bb48c73645dba1d2da754c3ed6";
-    // Using navigator.geolocation to get user's current position
     navigator.geolocation.getCurrentPosition(async (position) => {
       const lat = position.coords.latitude;
       const lon = position.coords.longitude;
@@ -27,18 +25,14 @@ const Footer = () => {
   return (
     <footer className="h-64 bg-red pt-10">
       <div className="w-4/6 mx-auto">
-        {/* Weather Section */}
-        {/* Weather and Map Section */}
         {weather && (
           <div className="md:flex justify-between items-center">
-            {/* Weather Info */}
             <div className="weather-info text-white">
               <p>
                 Weather in {weather.name}: {weather.main.temp}°C,{" "}
                 {weather.weather[0].description}
               </p>
             </div>
-            {/* Map */}
             <div style={{ height: "120px", width: "100%" }}>
               <MapContainer
                 center={[weather.coord.lat, weather.coord.lon]}
@@ -57,7 +51,6 @@ const Footer = () => {
             </div>
           </div>
         )}
-        {/* Copyright Section */}
         <div className="md:flex justify-between items-center mb-4">
           <p className="font-playfair font-semibold text-2xl text-white">
             FARZAD SANJARANI
