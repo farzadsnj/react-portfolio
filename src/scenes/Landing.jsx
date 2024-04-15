@@ -52,7 +52,6 @@ const Landing = ({ setSelectedPage }) => {
           </p>
         </motion.div>
 
-        {/* call to action */}
         <motion.div
           className="flex mt-5 justify-center md:justify-start"
           initial="hidden"
@@ -79,7 +78,7 @@ const Landing = ({ setSelectedPage }) => {
             href="#portfolio"
           >
             <div className="bg-deep-blue hover:text-yellow transition duration-500 w-full h-full flex items-center justify-center px-10 font-semibold">
-              Portfolio
+              My GitHub Projects
             </div>
           </AnchorLink>
         </motion.div>

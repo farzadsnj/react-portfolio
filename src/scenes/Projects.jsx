@@ -1,7 +1,5 @@
 import React from "react";
 import LineGradient from "../components/LineGradient";
-// import Portfolio from "../components/Portfolio";
-
 import { motion } from "framer-motion";
 
 const container = {
@@ -61,7 +59,7 @@ const Projects = () => {
         }}
       >
         <div>
-          <p className="font-playfair font-semibold text-4xl">
+          <p className="font-playfair font-semibold text-4xl pt-5">
             <span className="text-yellow">PRO</span>JECTS
           </p>
           <div className="flex justify-center mt-5">

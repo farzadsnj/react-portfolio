@@ -1,6 +1,7 @@
 import React from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
+
 const DotGroup = ({ selectedPage, setSelectedPage }) => {
   const selectedStyles = `relative justify-center bg-yellow before:absolute before:w-6 before:h-6 before:rounded-full before:border-2 before:border-yellow before:left-[-50%] before:top-[-50%]`;
   return (
@@ -28,7 +29,32 @@ const DotGroup = ({ selectedPage, setSelectedPage }) => {
         href={"#projects"}
         onClick={() => setSelectedPage("projects")}
       />
+      
       <AnchorLink
+        className={`${
+          selectedPage === "github" ? selectedStyles : "bg-dark-grey"
+        } w-3 h-3 rounded-full`}
+        href={"#github"}
+        onClick={() => setSelectedPage("github")}
+      />
+
+<AnchorLink
+        className={`${
+          selectedPage === "services" ? selectedStyles : "bg-dark-grey"
+        } w-3 h-3 rounded-full`}
+        href={"#services"}
+        onClick={() => setSelectedPage("services")}
+      />
+
+<AnchorLink
+        className={`${
+          selectedPage === "testimonials" ? selectedStyles : "bg-dark-grey"
+        } w-3 h-3 rounded-full`}
+        href={"#testimonials"}
+        onClick={() => setSelectedPage("testimonials")}
+      />
+
+<AnchorLink
         className={`${
           selectedPage === "contact" ? selectedStyles : "bg-dark-grey"
         } w-3 h-3 rounded-full`}

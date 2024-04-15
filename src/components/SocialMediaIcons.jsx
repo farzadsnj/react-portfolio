@@ -34,7 +34,7 @@ const SocialMediaIcons = () => {
 
         <a
           className="flex font-playfair hover:opacity-50 transition duration-500 justify-center"
-          href="https://drive.google.com/file/d/1yMp7C3KoQNrKphTwXsbQHN2fjnKnzqpB/view?usp=sharing"
+          href="https://drive.google.com/file/d/1V9UYzXk1NPJXiTiSnDt3djK6FQI_3f5B/view?usp=sharing"
           target="_blank"
           rel="noreferrer"
         >
@@ -43,14 +43,13 @@ const SocialMediaIcons = () => {
             src="../assets/profile.png"
             className=" mr-2 justify-center"
           />
-          DOWNLOAD CV
+          CV
         </a>
         </div>
         <div className="flex justify-center md:justify-start my-10 gap-7">
           <a
             className="hover:opacity-50 transition duration-500"
             href={`tel:+61415479443`}
-            // target="_blank"
             rel="noreferrer"
           >
             <img alt="phone" src="../assets/phone-call.png" />

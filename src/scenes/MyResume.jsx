@@ -43,7 +43,7 @@ const MyResume = () => {
 
   const isAboveMediumScreens = useMediaQuary("(min-width: 1060px)");
   return (
-    <section id="resume" className="p-10 pb-24">
+    <section id="resume" className="p-10 pb-15">
       {/* header and image section */}
       <div className="md:flex md:justify-between md:gap-16 mt-32">
         <motion.div
@@ -186,6 +186,7 @@ before:w-full before:max-w-[400px] before:h-full before:border-2 before:border-y
       </div>
       <div className="md:flex md:justify-between mt-16 gap-32 flex-wrap w-50">
         {/* An Overview Summary */}
+      <br />
         <SectionComponent
           title="Summary"
           delay={0.5}
@@ -199,66 +200,69 @@ before:w-full before:max-w-[400px] before:h-full before:border-2 before:border-y
       </div>
       <LineGradient width={"w100%"} />
       {/* Career History */}
+      <br />
       <SectionComponent
         title="Career History"
         delay={0.6}
         experiences={experiences || []}
       />
       <LineGradient width={"w100%"} />
-
       {/* Skills */}
+      <br />
       <SectionComponent title="Skills" delay={0.7} skills={skills} />
       <LineGradient width={"w100%"} />
-
-      {/* Publications/Notable Outputs */}
+      <br />
       <SectionComponent
-        title="Publications/Notable Outputs"
+        title="Publications"
         delay={0.8}
         content={
-          <div className="grid grid-cols-3 gap-3 list-disc list-inside">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-2 list-disc list-inside">
             <div className="linkedin-post-wrapper">
               <p className="font-playfair font-semibold text-2xl mb-5">
                 Advanced <span className="text-yellow">Git Commands</span>
               </p>
-              <iframe
-                src="https://www.linkedin.com/embed/feed/update/urn:li:share:7165931316151066626"
-                height="900"
-                width="500"
-                frameBorder="0"
-                allowFullScreen=""
-                title="Embedded post"
-              ></iframe>
+              <div className="iframe-container">
+                <iframe
+                  src="https://www.linkedin.com/embed/feed/update/urn:li:share:7165931316151066626"
+                  frameBorder="0"
+                  allowFullScreen=""
+                  title="Embedded post"
+                  className="responsive-iframe w-full h-50"
+                ></iframe>
+              </div>
             </div>
             <div className="linkedin-post-wrapper">
               <p className="font-playfair font-semibold text-2xl mb-5">
                 Essential <span className="text-yellow">Docker Commands</span>
               </p>
-              <iframe
-                src="https://www.linkedin.com/embed/feed/update/urn:li:share:7167729096272150528"
-                height="900"
-                width="500"
-                frameBorder="0"
-                allowFullScreen=""
-                title="Embedded post"
-              ></iframe>
+              <div className="iframe-container">
+                <iframe
+                  src="https://www.linkedin.com/embed/feed/update/urn:li:share:7167729096272150528"
+                  frameBorder="0"
+                  allowFullScreen=""
+                  title="Embedded post"
+                  className="responsive-iframe w-full"
+                ></iframe>
+              </div>
             </div>
             <div className="linkedin-post-wrapper">
               <p className="font-playfair font-semibold text-2xl mb-5">
                 Dynamic data{" "}
                 <span className="text-yellow">visualization Challenge</span>
               </p>
-              <iframe
-                src="https://www.linkedin.com/embed/feed/update/urn:li:share:7165543138386755584"
-                height="900"
-                width="500"
-                frameBorder="0"
-                allowFullScreen=""
-                title="Embedded post"
-              ></iframe>
+              <div className="iframe-container">
+                <iframe
+                  src="https://www.linkedin.com/embed/feed/update/urn:li:share:7165543138386755584"
+                  frameBorder="0"
+                  allowFullScreen=""
+                  title="Embedded post"
+                  className="responsive-iframe w-full"
+                ></iframe>
+              </div>
             </div>
           </div>
         }
-      />   
+      />
     </section>
   );
 };
