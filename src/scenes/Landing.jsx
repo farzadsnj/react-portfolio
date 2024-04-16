@@ -66,16 +66,16 @@ const Landing = ({ setSelectedPage }) => {
           <AnchorLink
             className="bg-gradient-happyColors text-black rounded-md py-3 px-7 font-semibold
             hover:bg-blue hover:text-white transition duration-500"
-            onClick={() => setSelectedPage("contact")}
-            href="#contact"
+            onClick={() => setSelectedPage("resume")}
+            href="#resume"
           >
             Resume
           </AnchorLink>
 
           <AnchorLink
             className="rounded-r-sm bg-gradient-rainblue py-0.5 pr-0.5"
-            onClick={() => setSelectedPage("portfolio")}
-            href="#portfolio"
+            onClick={() => setSelectedPage("github")}
+            href="#github"
           >
             <div className="bg-deep-blue hover:text-yellow transition duration-500 w-full h-full flex items-center justify-center px-10 font-semibold">
               My GitHub Projects
