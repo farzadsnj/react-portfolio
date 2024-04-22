@@ -186,7 +186,7 @@ before:w-full before:max-w-[400px] before:h-full before:border-2 before:border-y
       </div>
       <div className="md:flex md:justify-between mt-16 gap-32 flex-wrap w-50">
         {/* An Overview Summary */}
-      <br />
+        <br />
         <SectionComponent
           title="Summary"
           delay={0.5}
