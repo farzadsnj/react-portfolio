@@ -4,19 +4,23 @@ import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
 import SocialMediaIcons from "../components/SocialMediaIcons";
 
+// Contact component handles user input for contacting the site owner
 const Contact = () => {
+  // Utilizes useForm hook from react-hook-form for form validation and handling
   const {
-    register,
-    trigger,
-    formState: { errors },
+    register, // function to register an input
+    trigger, // function to manually trigger form validation
+    formState: { errors }, // object containing form state and validation errors
   } = useForm();
 
+  // Function to handle form submission
   const onSubmit = async (e) => {
-    const isValid = await trigger();
+    const isValid = await trigger(); // Validate form before submission
     if (!isValid) {
-      e.preventDefault();
+      e.preventDefault(); // Prevent form submission if validation fails
     }
   };
+
   return (
     <>
       <section id="contact" className="py-48">
@@ -27,8 +31,8 @@ const Contact = () => {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ delay: 0.1, duration: 0.5 }}
           variants={{
-            hidden: { opacity: 0, x: -50 },
-            visible: { opacity: 1, x: 0 },
+            hidden: { opacity: 0, x: -50 }, // Initial state before animation
+            visible: { opacity: 1, x: 0 }, // State after animation
           }}
         >
           <div>
@@ -40,12 +44,12 @@ const Contact = () => {
               <LineGradient width="w-1/2" />
             </div>
             <span>
-              <SocialMediaIcons />
+              <SocialMediaIcons /> {/* Displays social media icons */}
             </span>
           </div>
         </motion.div>
 
-        {/* form and image */}
+        {/* Section for form and image display */}
         <div className="md:flex md:justify-between gap-16 mt-5">
           <motion.div
             className="basis-1/2 flex justify-center"
@@ -72,6 +76,7 @@ const Contact = () => {
               visible: { opacity: 1, y: 0 },
             }}
           >
+            {/* Form for sending a message */}
             <form
               target="_blank"
               onSubmit={onSubmit}
@@ -84,10 +89,12 @@ const Contact = () => {
                 name="name"
                 placeholder="NAME"
                 {...register("name", {
+                  // Register input for validation
                   required: true,
                   maxLength: 100,
                 })}
               />
+              {/* Display validation error messages */}
               {errors.name && (
                 <p className="text-red mt-1">
                   {errors.name.type === "required" && "This field is required."}
@@ -116,10 +123,8 @@ const Contact = () => {
 
               <textarea
                 className="w-full bg-blue font-semibold placeholder-gray-400 p-3 mt-5"
-                type="text"
                 name="message"
                 rows="4"
-                cols="50"
                 placeholder="MESSAGE"
                 {...register("message", {
                   required: true,
@@ -131,7 +136,7 @@ const Contact = () => {
                   {errors.message.type === "required" &&
                     "This field is required."}
                   {errors.message.type === "maxLength" &&
-                    "Max lenght is 2000 char"}
+                    "Max length is 2000 char."}
                 </p>
               )}
 

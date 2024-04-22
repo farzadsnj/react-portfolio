@@ -51,4 +51,3 @@ Contributions are always welcome! If you would like to contribute, please follow
 This project is open-source and available under the MIT License.
 
 # Contact
-If you have any questions or want to reach out for opportunities, don't hesitate to contact me at n11521147@qut.edu.au or visit my LinkedIn profile at https://www.linkedin.com/in/farzadsnj/.

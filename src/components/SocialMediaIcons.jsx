@@ -1,7 +1,6 @@
 import React from "react";
 
 const SocialMediaIcons = () => {
-
   return (
     <div className="flex-col justify-start">
       <div className="flex justify-center md:justify-start my-10 gap-7">
@@ -45,43 +44,43 @@ const SocialMediaIcons = () => {
           />
           CV
         </a>
-        </div>
-        <div className="flex justify-center md:justify-start my-10 gap-7">
-          <a
-            className="hover:opacity-50 transition duration-500"
-            href={`tel:+61415479443`}
-            rel="noreferrer"
-          >
-            <img alt="phone" src="../assets/phone-call.png" />
-          </a>
-
-          <a
-            className="hover:opacity-50 transition duration-500"
-            href={`mailto:farzadsnjau@gmail.com`}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img alt="gmail" src="../assets/gmail-logo.png" />
-          </a>
-
-          <a
-            className="hover:opacity-50 transition duration-500"
-            href="https://wa.me/message/KW7P6LKILMKMJ1"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img alt="whatsapp" src="../assets/whatsapp.png" />
-          </a>
-          <a
-            className="hover:opacity-50 transition duration-500"
-            href="https://t.me/farzadsnj"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img alt="telegram" src="../assets/telegram.png" />
-          </a>
-        </div>
       </div>
+      <div className="flex justify-center md:justify-start my-10 gap-7">
+        <a
+          className="hover:opacity-50 transition duration-500"
+          href={`tel:+61415479443`}
+          rel="noreferrer"
+        >
+          <img alt="phone" src="../assets/phone-call.png" />
+        </a>
+
+        <a
+          className="hover:opacity-50 transition duration-500"
+          href={`mailto:farzadsnjau@gmail.com`}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img alt="gmail" src="../assets/gmail-logo.png" />
+        </a>
+
+        <a
+          className="hover:opacity-50 transition duration-500"
+          href="https://wa.me/message/KW7P6LKILMKMJ1"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img alt="whatsapp" src="../assets/whatsapp.png" />
+        </a>
+        <a
+          className="hover:opacity-50 transition duration-500"
+          href="https://t.me/farzadsnj"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img alt="telegram" src="../assets/telegram.png" />
+        </a>
+      </div>
+    </div>
   );
 };
 
