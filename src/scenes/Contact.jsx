@@ -66,7 +66,7 @@ const Contact = () => {
           </motion.div>
 
           <motion.div
-            className="basis-1/2 mt-7 md:mt-0"
+            className="basis-1/2 mt-8 md:mt-0"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}

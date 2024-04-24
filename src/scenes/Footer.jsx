@@ -3,36 +3,36 @@ import LineGradient from "../components/LineGradient";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
-// Footer component that displays weather information and site owner details
 const Footer = () => {
-  const [weather, setWeather] = useState(null); // State to store weather data
+  const [weather, setWeather] = useState(null);
+  const apiKey = process.env.REACT_APP_WEATHER_API_KEY; // Using environment variable for API key
 
   useEffect(() => {
-    const apiKey = "dbbcf3bb48c73645dba1d2da754c3ed6"; // OpenWeatherMap API key
-    // Get user's current geographic position
     navigator.geolocation.getCurrentPosition(async (position) => {
-      const lat = position.coords.latitude; // Latitude from geolocation
-      const lon = position.coords.longitude; // Longitude from geolocation
+      const lat = position.coords.latitude;
+      const lon = position.coords.longitude;
       const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
 
       try {
-        const response = await fetch(apiUrl); // Fetch weather data from API
-        const data = await response.json(); // Convert response to JSON
-        setWeather(data); // Update state with weather data
+        const response = await fetch(apiUrl);
+        const data = await response.json();
+        if (data && data.main && data.weather) {
+          setWeather(data); // Ensure data is structured as expected before updating state
+        }
       } catch (error) {
-        console.error("Failed to fetch weather data:", error); // Log errors to console
+        console.error("Failed to fetch weather data:", error);
       }
     });
-  }, []); // Effect runs only once on mount
+  }, [apiKey]); // Include apiKey in dependency array
 
   return (
     <footer className="h-auto bg-orange-400 p-10">
       <div className="w-4/6 mx-auto">
-        {weather && (
+        {weather ? (
           <div className="w-full md:flex justify-between items-center">
             <div className="w-3/6 weather-info text-black font-bold">
               <p>
-                Weather in {weather.name}: {weather.main.temp}°C,{" "}
+                Weather in {weather.name}: {weather.main.temp}°C,
                 {weather.weather[0].description}
               </p>
             </div>
@@ -54,6 +54,8 @@ const Footer = () => {
               </MapContainer>
             </div>
           </div>
+        ) : (
+          <p>Loading weather data...</p> // Provide a loading or default message
         )}
         <br />
         <div className="md:flex justify-between items-center mb-4">
